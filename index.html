@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semerau Studios - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        header .logo {
+            height: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .hero .background-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .hero .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .about, .services, .contact-us, .terms-conditions, .careers {
+            padding: 20px;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about-content p {
+            width: 50%;
+        }
+
+        .about-content img {
+            width: 40%;
+            height: auto;
+        }
+
+        .service {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .service-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .contact-content {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .contact-info, .contact-form {
+            width: 45%;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-form label {
+            margin-top: 10px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 1em;
+        }
+
+        .contact-form input[type="submit"] {
+            margin-top: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        .contact-form input[type="submit"]:hover {
+            background-color: #555;
+        }
+
+        .footer-left, .footer-right {
+            display: inline-block;
+            width: 50%;
+            padding: 10px;
+        }
+
+        .footer-right ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+
+        .footer-right ul li {
+            display: inline;
+            margin-left: 20px;
+        }
+
+        .footer-right ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/ssbanner.JPG" alt="Company Logo" class="logo">
+        <h1>Semerau Studios</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#terms">Terms and Conditions</a></li>
+                <li><a href="#careers">Careers</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="hero">
+            <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/banner 3.JPG" alt="Background Image" class="background-image">
+            <div class="hero-text">
+                <h2>Semerau Studios</h2>
+                <p>Your Partner in Creative Excellence</p>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <hr>
+            <div class="about-content">
+                <p>Semerau Studios is a versatile production company offering a broad spectrum of services, including Marketing & Media solutions, Artist Management, and Media Production. We work closely with businesses and individuals to bring their creative visions to life with customized solutions tailored to meet each client's unique requirements.</p>
+                <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/About us image.JPG" alt="About Us Image">
+            </div>
+        </section>
+        
+        <section id="services" class="services">
+            <h2>Services</h2>
+            <hr>
+            <div class="service">
+                <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/Marketing and Media Solutions services image.JPG" alt="Marketing and Media Solutions" class="service-img">
+                <h3>Marketing and Media Solutions</h3>
+                <p>Our expert marketing and media consultation services provide customized strategies for SEO, content creation, and advertising to boost your media impact.</p>
+            </div>
+            <div class="service">
+                <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/Artist Management image.JPG" alt="Artist Management" class="service-img">
+                <h3>Artist Management</h3>
+                <p>Comprehensive support for musicians, including career planning, contract negotiations, event booking, and day-to-day management.</p>
+            </div>
+            <div class="service">
+                <img src="https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/Media Production image.JPG" alt="Media Production" class="service-img">
+                <h3>Media Production</h3>
+                <p>We offer comprehensive video and audio production services, including editing, recording, and engineering, to ensure high-quality media content.</p>
+            </div>
+            <hr>
+            <h2 class="center"><a href="https://forms.gle/9eYfwZWoP8ecRjF96" target="_blank">Service Contract Application</a></h2>
+            <p>How to Apply for Our Service Contract:</p>
+            <ol>
+                <li>Click the "Service Contract Application" Header: This will open the Google Form.</li>
+                <li>Fill Out the Form: Complete all required fields.</li>
+                <li>Submit: Click the "Submit" button when you’re done.</li>
+            </ol>
+        </section>
+        
+        <section id="contact" class="contact-us">
+            <h2 class="center">Contact Us</h2>
+            <hr>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p>Las Vegas, Nevada, United States</p>
+                    <p>+1-702-419-0027</p>
+                    <p>contactus@semeraustudios.com</p>
+                </div>
+                <div class="contact-form">
+                    <form action="mailto:contactus@semeraustudios.com" method="post" enctype="text/plain">
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" required><br>
+                        <label for="phone">Phone Number:</label><br>
+                        <input type="tel" id="phone" name="phone" required><br>
+                        <label for="email">Email Address:</label><br>
+                        <input type="email" id="email" name="email" required><br>
+                        <label for="message">Message:</label><br>
+                        <textarea id="message" name="message" rows="4" required></textarea><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <section id="terms" class="terms-conditions">
+            <h2 class="center">Terms and Conditions</h2>
+            <hr>
+            <ul>
+                <li>
+                    <h3><u>Scope of Work</u></h3>
+                    <p>Semerau Studios agrees to provide the requested services as described in the project description. Any additional services requested by the client will be subject to additional charges.</p>
+                </li>
+                <li>
+                    <h3><u>Payment Terms</u></h3>
+                    <p>This section outlines the financial aspects of the agreement, including the general service fee, percentage of sales from advertising, percentage of sales from music, and percentage of sales from merchandise. It ensures both parties are clear on their financial commitments and expectations. It serves to provide a clear understanding of the financial obligations and revenue-sharing arrangements between Semerau Studios and the client, ensuring transparency and mutual agreement on all payment-related terms. Failure to adhere to these terms may result in project delays, additional fees, or termination of services.</p>
+                    <ul>
+                        <li>
+                            <b>General Service Fee</b>
+                            <p>Service fees are determined on a case-by-case basis, depending on the urgency, project size, type, and duration. Once an estimate of the project is completed, a separate form covering a breakdown of projected fees will be provided and must be signed by the client.</p>
+                        </li>
+                        <li>
+                            <b>Percentage of Sales from Advertising</b>
+                            <p>For advertising services, Semerau Studios will receive a fixed rate of 12% of all sales generated from advertising campaigns. This percentage is in addition to any service fees.</p>
+                        </li>
+                        <li>
+                            <b>Percentage of Sales from Music</b>
+                            <p>For music-related services, including production, distribution, and promotion, Semerau Studios will receive a fixed rate of 10% of all sales generated from music tracks, albums, and related merchandise.</p>
+                        </li>
+                        <li>
+                            <b>Percentage of Sales from Merchandise</b>
+                            <p>For merchandise sales, Semerau Studios will receive a fixed rate of 15% of all sales generated from branded merchandise, including but not limited to clothing, accessories, and promotional items.</p>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3><u>Revisions</u></h3>
+                    <p>The client is entitled to one revision of the work. Any additional revisions will incur extra charges at the rate of 5%.</p>
+                </li>
+                <li>
+                    <h3><u>Confidentiality</u></h3>
+                    <p>Semerau Studios agrees to keep all client information and project details confidential. This includes any proprietary information, trade secrets, or other sensitive data.</p>
+                </li>
+                <li>
+                    <h3><u>Ownership and Attribution</u></h3>
+                    <p>Upon full payment, the client will own the final product. However, Semerau Studios retains the right to use the work for promotional purposes unless otherwise agreed upon in writing. Additionally, the final product must retain the Semerau Studios logo watermark, unless otherwise agreed upon in writing.</p>
+                </li>
+                <li>
+                    <h3><u>Intellectual Property Rights</u></h3>
+                    <p>Semerau Studios retains all intellectual property rights to any preliminary work, drafts, or concepts created during the project. The client will only have rights to the final product upon full payment.</p>
+                </li>
+                <li>
+                    <h3><u>Cancellation Policy</u></h3>
+                    <p>Either party may cancel the contract with 72 hours’ written notice. The client will be responsible for payment of all work completed up to the cancellation date. A cancellation can result in an additional fee, depending on the project, up to $100.</p>
+                </li>
+                <li>
+                    <h3><u>Liability</u></h3>
+                    <p>Semerau Studios is not liable for any indirect, incidental, or consequential damages arising from the services provided. The total liability of Semerau Studios shall not exceed 50% of the amount paid by the client for the services.</p>
+                </li>
+                <li>
+                    <h3><u>Indemnification</u></h3>
+                    <p>The client agrees to indemnify and hold harmless Semerau Studios from any claims, damages, liabilities, and expenses arising out of the client’s use of the services provided.</p>
+                </li>
+                <li>
+                    <h3><u>Warranties and Representations</u></h3>
+                    <p>Semerau Studios warrants that the services provided will be performed in a professional and workmanlike manner. However, Semerau Studios makes no other warranties, express or implied, regarding the services provided.</p>
+                </li>
+                <li>
+                    <h3><u>Force Majeure</u></h3>
+                    <p>Semerau Studios shall not be liable for any failure to perform its obligations under this contract if such failure results from circumstances beyond its reasonable control, including but not limited to acts of God, war, strikes, or government regulations.</p>
+                </li>
+                <li>
+                    <h3><u>Non-Solicitation</u></h3>
+                    <p>The client agrees not to solicit or hire any employees or contractors of Semerau Studios for a period of one year following the completion of the project.</p>
+                </li>
+                <li>
+                    <h3><u>Dispute Resolution</u></h3>
+                    <p>Any disputes arising out of or in connection with this contract shall be resolved through mediation. If mediation fails, the dispute shall be settled by arbitration in accordance with the rules of the American Arbitration Association.</p>
+                </li>
+                <li>
+                    <h3><u>Governing Law</u></h3>
+                    <p>This contract shall be governed by and construed in accordance with the laws of the state of NV.</p>
+                </li>
+            </ul>
+            <p class="note">Note: Email us at contactus@semeraustudios.com if you have any questions or need clarification on any part of the terms and conditions.</p>
+        </section>
+        
+        <section id="careers" class="careers">
+            <h2 class="center">Careers</h2>
+            <hr>
+            <p>Career opportunities content goes here...</p>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-left">
+            <p>Semerau Studios<br>Copyright © 2025 All rights reserved</p>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#terms">Terms and Conditions</a></li>
+                <li><a href="#careers">Careers</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const heroText = document.querySelector('.hero-text');
+            heroText.style.transform = 'translateY(' + window.scrollY * 0.5 + 'px)';
+        });
+    </script>
+</body>
+</html>
