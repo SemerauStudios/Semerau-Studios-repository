@@ -20,22 +20,24 @@
             background-color: #333;
             color: #fff;
         }
-@media (max-width: 600px) {
-    header {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
 
-    nav ul li {
-        margin-left: 0;
-        margin-top: 10px;
-    }
-}
+            nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav ul li {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
         header .logo {
             height: 50px;
             width: 50px;
@@ -104,221 +106,253 @@
             margin: 10px 0 0 0;
         }
 
-        .about {
-            display: flex;
-            align-items: center;
-            text-align: left;
-            padding: 50px 20px;
-            background-color: #f4f4f4;
-        }
-
-        .about .about-text {
-            max-width: 50%;
-            margin-right: 20px;
-        }
-
-        .about .about-image {
-            display: flex; 
-            justify-content: center;
-            width: 50%;
-        }
-
-        .about .about-image img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .about h2 {
-            font-size: 36px;
-            font-weight: 700;
-            margin: 0 0 10px 0;
-            text-align: center;
-        }
-
-        .about .line {
-            width: 50px;
-            height: 5px;
-            background-color: #000;
-            margin: 10px auto;
-        }
-
-        .about p {
-            font-size: 21px;
-            margin: 20px 0 0 0;
-        }
-
-        .services, .contact-us, .terms-conditions {
-            padding: 20px;
-            text-align: center;
-        }
-
-        .services h2 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        .services hr {
-            width: 5;
-            height: 5px;
-            background-color: #000;
-            margin: 20px auto;
-        }
-
-        .services-list {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        .service {
-            text-align: center;
-            margin-bottom: 20px;
-            max-width: 30%;
-        }
-
-        .service-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .service h3 {
-            font-size: 21px;
-            margin: 10px 0;
-        }
-
-        .service p {
-            font-size: 21px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .contact-content {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .contact-info {
-            width: 45%;
-            display: flex;
+        .hamburger {
+            display: none;
             flex-direction: column;
-            justify-content: center;
-            font-size: 23px; /* Increased font size */
-        }
-
-        .contact-info p {
-            margin: 5px 0;
-        }
-
-        .contact-form {
-            width: 45%;
-        }
-
-        .contact-form form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .contact-form label {
-            margin-top: 10px;
-            font-size: 21px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            margin-top: 5px;
-            padding: 10px;
-            font-size: 21px;
-        }
-
-        .contact-form input[type="submit"] {
-            margin-top: 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
             cursor: pointer;
         }
 
-        .contact-form input[type="submit"]:hover {
-            background-color: #555;
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+            margin: 4px 0;
         }
 
-        .footer-left, .footer-right {
-            display: inline-block;
-            width: 50%;
-            padding: 10px;
-            vertical-align: top;
-        }
+        @media (max-width: 600px) {
+            .hamburger {
+                display: flex;
+            }
 
-        .footer-right {
-            text-align: right;
-        }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+            }
 
-        .footer-right ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+            nav ul.active {
+                display: flex;
+            }
 
-        .footer-right ul li {
-            display: inline;
-            margin-left: 20px;
-        }
-
-        .footer-right ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-        }
-
-        .services-application {
-            font-size: 21px;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .services-application p {
-            margin: 5px 0;
-        }
-
-        .services-application div {
-            display: inline-block;
-            text-align: left;
-        }
-
-        .terms-conditions ul {
-            text-align: left;
-            padding-left: 0;
-            list-style: none;
-        }
-
-        .terms-conditions ul li {
-            margin-bottom: 20px;
-        }
-
-        .terms-conditions ul li h3, .terms-conditions ul li p {
-            margin-left: 20px;
-        }
-
-        .terms-conditions ul li h3 {
-            margin-top: 0;
-        }
-
-        .terms-conditions .note {
-            text-align: left;
-            margin-left: 20px;
-            font-weight: bold;
-        }
-    </style>
-</head>
+            nav ul li {
+                margin: 10px 0;
+            }
+    }
+    
+    .about {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+    }
+    
+            .about .about-text {
+                max-width: 50%;
+                margin-right: 20px;
+            }
+    
+            .about .about-image {
+                display: flex; 
+                justify-content: center;
+                width: 50%;
+            }
+    
+            .about .about-image img {
+                max-width: 100%;
+                height: auto;
+            }
+    
+            .about h2 {
+                font-size: 32px;
+                font-weight: 700;
+                margin: 0 0 10px 0;
+                text-align: center;
+            }
+    
+            .about .line {
+                width: 50px;
+                height: 5px;
+                background-color: #000;
+                margin: 10px auto;
+            }
+    
+            .about p {
+                font-size: 21px;
+                margin: 20px 0 0 0;
+            }
+    
+            .services, .contact-us, .terms-conditions {
+                padding: 20px;
+                text-align: center;
+            }
+    
+            .services h2 {
+                font-size: 36px;
+                margin: 0;
+            }
+    
+            .services hr {
+                width: 50px;
+                height: 5px;
+                background-color: #000;
+                margin: 20px auto;
+            }
+    
+            .services-list {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+    
+            .service {
+                text-align: center;
+                margin-bottom: 20px;
+                max-width: 30%;
+            }
+    
+            .service-img {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+    
+            .service h3 {
+                font-size: 21px;
+                margin: 10px 0;
+            }
+    
+            .service p {
+                font-size: 21px;
+            }
+    
+            .center {
+                text-align: center;
+            }
+    
+            .contact-content {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .contact-info {
+                width: 45%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 23px;
+            }
+    
+            .contact-info p {
+                margin: 5px 0;
+            }
+    
+            .contact-form {
+                width: 45%;
+            }
+    
+            .contact-form form {
+                display: flex;
+                flex-direction: column;
+            }
+    
+            .contact-form label {
+                margin-top: 10px;
+                font-size: 21px;
+            }
+    
+            .contact-form input, .contact-form textarea {
+                margin-top: 5px;
+                padding: 10px;
+                font-size: 21px;
+            }
+    
+            .contact-form input[type="submit"] {
+                margin-top: 20px;
+                background-color: #333;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+    
+            .contact-form input[type="submit"]:hover {
+                background-color: #555;
+            }
+    
+            footer {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 20px;
+            }
+    
+            .footer-left, .footer-right {
+                display: inline-block;
+                width: 100%;
+                padding: 10px;
+                vertical-align: top;
+            }
+    
+            .footer-right {
+                text-align: right;
+            }
+    
+            .footer-right ul {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+            }
+    
+            .footer-right ul li {
+                display: inline;
+                margin-left: 20px;
+            }
+    
+            .footer-right ul li a {
+                color: #fff;
+                text-decoration: none;
+            }
+    
+            .services-application {
+                font-size: 21px;
+                text-align: center;
+                margin-top: 20px;
+            }
+    
+            .services-application p {
+                margin: 5px 0;
+            }
+    
+            .services-application div {
+                display: inline-block;
+                text-align: left;
+            }
+    
+            .terms-conditions ul {
+                text-align: left;
+                padding-left: 0;
+                list-style: none;
+            }
+    
+            .terms-conditions ul li {
+                margin-bottom: 20px;
+            }
+    
+            .terms-conditions ul li h3, .terms-conditions ul li p {
+                margin-left: 20px;
+            }
+    
+            .terms-conditions ul li h3 {
+                margin-top: 0;
+            }
+    
+            .terms-conditions .note {
+                text-align: left;
+                margin-left: 20px;
+                font-weight: bold;
+            }
+        </style>
 <body>
     <header>
         <div class="title">
@@ -495,18 +529,18 @@
             </div>
         </section>
         <footer>
-        <div class="footer-left">
-            <p>Semerau Studios<br>Copyright © 2025 All rights reserved</p>
-        </div>
-        <div class="footer-right">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-                <li><a href="#terms">Terms and Conditions</a></li>
-            </ul>
-        </div>
+            <div class="footer-left">
+                <p>Semerau Studios<br>Copyright © 2025 All rights reserved</p>
+            </div>
+            <div class="footer-right">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#terms">Terms and Conditions</a></li>
+                </ul>
+            </div>
         </footer>
         <script>
         window.addEventListener('scroll', function() {
