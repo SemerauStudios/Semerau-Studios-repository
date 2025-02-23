@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Semerau Studios - Home</title>
     <style>
-        body {
+         body {
             font-family: caladea;
             margin: 0;
             padding: 0;
@@ -140,34 +140,41 @@
         }
     
         .about {
-            display: flex;
-            align-items: center;
-            text-align: left;
+            position: relative;
+            text-align: center;
             padding: 50px 20px;
             background-color: #f4f4f4;
         }
     
         .about .about-text {
-            max-width: 50%;
-            margin-right: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 60%;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            z-index: 1;
         }
     
         .about .about-image {
-            display: flex; 
-            justify-content: center;
-            width: 50%;
+            width: 100%;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
         }
     
         .about .about-image img {
-            max-width: 100%;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     
         .about h2 {
             font-size: 36px;
             font-weight: 700;
             margin: 0 0 10px 0;
-            text-align: center;
         }
     
         .about .line {
@@ -285,6 +292,7 @@
         .contact-form input[type="submit"]:hover {
             background-color: #555;
         }
+    
     
         footer {
             background-color: #333;
