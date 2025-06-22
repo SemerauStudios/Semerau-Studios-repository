@@ -53,6 +53,41 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     setServiceBackgrounds();
     window.addEventListener('resize', setServiceBackgrounds);
+
+    // Collapsible Partner Links on Mobile
+    const partnersToggle = document.getElementById('partners-toggle');
+    const partnersList = document.querySelector('.partners-list');
+    if (partnersToggle && partnersList) {
+        function togglePartnersList() {
+            // Only work on mobile widths
+            if (window.innerWidth <= 700) {
+                partnersList.classList.toggle('active');
+                // Update aria-expanded for accessibility
+                partnersToggle.setAttribute('aria-expanded', partnersList.classList.contains('active'));
+            }
+        }
+        partnersToggle.addEventListener('click', togglePartnersList);
+        partnersToggle.addEventListener('keypress', function(e) {
+            if (e.key === "Enter" || e.key === " ") {
+                togglePartnersList();
+            }
+        });
+        // Optionally: Hide list again on window resize if not mobile
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 700) {
+                partnersList.classList.add('active'); // Always show on desktop
+                partnersToggle.setAttribute('aria-expanded', 'true');
+            } else {
+                partnersList.classList.remove('active');
+                partnersToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        // Initial state: show on desktop, hide on mobile
+        if (window.innerWidth > 700) {
+            partnersList.classList.add('active');
+            partnersToggle.setAttribute('aria-expanded', 'true');
+        }
+    }
 });
 
 // Parallax effect for hero section
