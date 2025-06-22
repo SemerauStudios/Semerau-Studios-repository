@@ -217,14 +217,14 @@ nav ul li a {
 }
 .about-mobile-overlay .section-title {
     font-size: 1.1em;
-    margin-bottom: 8px; /* more space below heading */
+    margin-bottom: 8px;
     padding-top: 0;
 }
 .about-mobile-overlay .line {
     width: 50px;
     height: 5px;
     background-color: #000;
-    margin: 0 auto 15px auto; /* less margin above, more below */
+    margin: 0 auto 15px auto;
     border-radius: 3px;
     display: block;
 }
@@ -233,9 +233,80 @@ nav ul li a {
     margin: 0;
 }
 
-/* Responsive: Show mobile version, not the overlay, on small screens */
+/* --- About Section: Blur Background Version --- */
+.about-blur-bg {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    min-height: 420px;
+    background: #f3f3f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 1;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+}
+.about-blur-img {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100%;
+    min-height: 420px;
+    background: url('https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/About%20us%20image.JPG') center center/cover no-repeat;
+    filter: blur(6px) brightness(1.05);
+    z-index: 1;
+}
+.about-blur-overlay {
+    position: relative;
+    z-index: 2;
+    background: rgba(255,255,255,0.91);
+    border-radius: 16px;
+    margin: 0 auto;
+    max-width: 900px;
+    width: 100%;
+    min-width: 320px;
+    padding: 38px 32px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 32px 0 rgba(31,38,135,0.15);
+}
+.about-blur-title {
+    font-family: 'Caladea', serif;
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #111;
+    margin: 0 0 6px 0;
+    letter-spacing: 0.01em;
+    text-align: center;
+}
+.about-blur-underline {
+    width: 55px;
+    height: 4px;
+    background: #111;
+    border-radius: 3px;
+    margin: 0 0 18px 0;
+}
+.about-blur-text {
+    font-family: 'Caladea', serif;
+    color: #111;
+    font-size: 1.15em;
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+    line-height: 1.4;
+    letter-spacing: 0.01em;
+}
+
+/* Responsive: Show mobile version on small screens */
 @media (max-width: 900px) {
-    .about-desktop-bg { display: none !important; }
+    .about-desktop-bg, .about-blur-bg { display: none !important; }
     .about-mobile { display: block !important; }
 }
 
@@ -373,6 +444,33 @@ nav ul li a {
         background-color: #333;
         color: #fff;
     }
+    .about-mobile,
+    .service {
+        width: 92vw !important;
+        max-width: 330px !important;
+        min-width: 0 !important;
+        min-height: 220px !important;
+        height: 220px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+        margin: 24px auto 20px auto !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+    .about-mobile-bg,
+    .service {
+        object-fit: cover !important;
+    }
+    .about-mobile .line,
+    .service .line {
+        min-height: 5px;
+        width: 50px !important;
+        height: 5px !important;
+        background-color: #000 !important;
+        margin: 4px auto 12px auto !important;
+        border-radius: 3px !important;
+        display: block !important;
+    }
 }
 
 /* Services/Contact/Terms */
@@ -475,20 +573,20 @@ nav ul li a {
     .partners-list {
         flex-direction: column;
         display: none;
+        padding-left: 16px;
+        padding-right: 16px;
     }
     .partners-list.active {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 18px;
-        max-width: 95vw;
-        padding-left: 10px;
-        padding-right: 10px;
     }
     .partner {
-        max-width: 100%;
         width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
+        margin: 0 0 20px 0;
     }
     .partner-link {
         justify-content: flex-start;
@@ -519,20 +617,17 @@ nav ul li a {
 .contact-info p {
     margin: 8px 0;
 }
-.instagram-icon {
+.instagram-icon,
+.email-icon,
+.whatsapp-icon,
+.discord-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
 }
-.email-icon {
-    width: 20px;
+.email-icon,
+.discord-icon {
     height: 15px;
-    vertical-align: middle;
-}
-.whatsapp-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
 }
 .contact-form form {
     display: flex;
@@ -630,137 +725,4 @@ footer {
 /* Hide the entire terms details by default */
 .terms-details {
     display: none;
-}
-.discord-icon {
-    width: 20px;
-    height: 15px;
-    vertical-align: middle;
-}
-/* Show desktop about, hide mobile by default */
-/* --- About Section: Blur Background Version --- */
-.about-blur-bg {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    min-height: 420px;
-    background: #f3f3f3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 1;
-    padding-left: 32px;
-    padding-right: 32px;
-    box-sizing: border-box;
-}
-
-.about-blur-img {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100vw;
-    height: 100%;
-    min-height: 420px;
-    background: url('https://raw.githubusercontent.com/SemerauStudios/Semerau-Studios-repository/main/About%20us%20image.JPG') center center/cover no-repeat;
-    filter: blur(6px) brightness(1.05);
-    z-index: 1;
-}
-
-.about-blur-overlay {
-    position: relative;
-    z-index: 2;
-    background: rgba(255,255,255,0.91);
-    border-radius: 16px;
-    margin: 0 auto;
-    max-width: 900px;
-    width: 100%;
-    min-width: 320px;
-    padding: 38px 32px 32px 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0 6px 32px 0 rgba(31,38,135,0.15);
-}
-
-.about-blur-title {
-    font-family: 'Caladea', serif;
-    font-size: 2.2em;
-    font-weight: bold;
-    color: #111;
-    margin: 0 0 6px 0;
-    letter-spacing: 0.01em;
-    text-align: center;
-}
-
-.about-blur-underline {
-    width: 55px;
-    height: 4px;
-    background: #111;
-    border-radius: 3px;
-    margin: 0 0 18px 0;
-}
-
-.about-blur-text {
-    font-family: 'Caladea', serif;
-    color: #111;
-    font-size: 1.15em;
-    text-align: center;
-    margin: 0;
-    font-weight: normal;
-    line-height: 1.4;
-    letter-spacing: 0.01em;
-}
-
-@media (max-width: 900px) {
-    .about-blur-bg { display: none !important; }
-}
-.about-mobile .section-title,
-  .about-mobile .line {
-    position: static;
-    display: block;
-    text-align: center;
-    z-index: 3;
-    margin: 0 auto 0 auto;
-  }
-  .about-mobile .section-title {
-    font-size: 1.1em;
-    margin-bottom: 4px;
-    padding-top: 0;
-  }
-  .about-mobile .line {
-    width: 50px;
-    height: 5px;
-    background-color: #000;
-    margin: 4px auto 12px auto;
-    border-radius: 3px;
-  }
-@media (max-width: 650px) {
-    .about-mobile,
-    .service {
-        width: 92vw !important;
-        max-width: 330px !important;
-        min-width: 0 !important;
-        min-height: 220px !important;
-        height: 220px !important;
-        border-radius: 14px !important;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
-        margin: 24px auto 20px auto !important;
-        overflow: hidden !important;
-        position: relative !important;
-    }
-    .about-mobile-bg,
-    .service {
-        object-fit: cover !important;
-    }
-    .about-mobile .line,
-    .service .line {
-        width: 50px !important;
-        height: 5px !important;
-        background-color: #000 !important;
-        margin: 4px auto 12px auto !important;
-        border-radius: 3px !important;
-        display: block !important;
-    }
 }
