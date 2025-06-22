@@ -217,14 +217,14 @@ nav ul li a {
 }
 .about-mobile-overlay .section-title {
     font-size: 1.1em;
-    margin: 0 0 8px 0;
+    margin-bottom: 8px; /* more space below heading */
     padding-top: 0;
 }
 .about-mobile-overlay .line {
     width: 50px;
     height: 5px;
     background-color: #000;
-    margin: 8px auto 15px auto;
+    margin: 0 auto 15px auto; /* less margin above, more below */
     border-radius: 3px;
     display: block;
 }
@@ -474,12 +474,21 @@ nav ul li a {
 @media (max-width: 700px) {
     .partners-list {
         flex-direction: column;
+        display: none;
+    }
+    .partners-list.active {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         gap: 18px;
+        max-width: 95vw;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .partner {
-        max-width: 95vw;
+        max-width: 100%;
         width: 100%;
+        box-sizing: border-box;
     }
     .partner-link {
         justify-content: flex-start;
@@ -511,6 +520,16 @@ nav ul li a {
     margin: 8px 0;
 }
 .instagram-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+.email-icon {
+    width: 20px;
+    height: 15px;
+    vertical-align: middle;
+}
+.whatsapp-icon {
     width: 20px;
     height: 20px;
     vertical-align: middle;
@@ -613,8 +632,8 @@ footer {
     display: none;
 }
 .discord-icon {
-    width: 25px;
-    height: 20px;
+    width: 20px;
+    height: 15px;
     vertical-align: middle;
 }
 /* Show desktop about, hide mobile by default */
@@ -697,12 +716,51 @@ footer {
 @media (max-width: 900px) {
     .about-blur-bg { display: none !important; }
 }
-
-/* Optional: Tweak line color for consistency */
-.line {
-  width: 50px;
-  height: 5px;
-  background-color: #000;
-  margin: 10px auto 20px auto;
-  border-radius: 3px;
+.about-mobile .section-title,
+  .about-mobile .line {
+    position: static;
+    display: block;
+    text-align: center;
+    z-index: 3;
+    margin: 0 auto 0 auto;
+  }
+  .about-mobile .section-title {
+    font-size: 1.1em;
+    margin-bottom: 4px;
+    padding-top: 0;
+  }
+  .about-mobile .line {
+    width: 50px;
+    height: 5px;
+    background-color: #000;
+    margin: 4px auto 12px auto;
+    border-radius: 3px;
+  }
+@media (max-width: 650px) {
+    .about-mobile,
+    .service {
+        width: 92vw !important;
+        max-width: 330px !important;
+        min-width: 0 !important;
+        min-height: 220px !important;
+        height: 220px !important;
+        border-radius: 14px !important;
+        box-shadow: 0 2px 12px rgba(0,0,0,0.07) !important;
+        margin: 24px auto 20px auto !important;
+        overflow: hidden !important;
+        position: relative !important;
+    }
+    .about-mobile-bg,
+    .service {
+        object-fit: cover !important;
+    }
+    .about-mobile .line,
+    .service .line {
+        width: 50px !important;
+        height: 5px !important;
+        background-color: #000 !important;
+        margin: 4px auto 12px auto !important;
+        border-radius: 3px !important;
+        display: block !important;
+    }
 }
